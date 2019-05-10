@@ -2,28 +2,40 @@
 #include "C:\source\lib\GL\freeglut.h"
 #include <iostream>
 #include <stdio.h>
-
+#include<stdlib.h>;
+#include<fstream>;
+#include<vector>;
 #include "Shader_Loader.h";
+#include "GameModels.h";
 using namespace Core;
 
 //http://in2gpu.com/2014/12/02/create-triangle-opengl-part/
-
+Models::GameModels* gameModels;
 GLuint program;
 void Redisplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glClearColor(1.0, 0.0, 0.0, 0.200);//clear red
-	//use the created program
-	glUseProgram(program);
+	glClearColor(0.0, 0.3, 0.3, 1.0);
 
-	//draw 3 vertices as triangles
+	glBindVertexArray(gameModels->GetModel("triangle1"));
+	glUseProgram(program);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	glutSwapBuffers();
 }
+void closeCallback()
+{
+
+	std::cout << "GLUT:\t Finished" << std::endl;
+	glutLeaveMainLoop();
+}
+
 void Init()
 {
 
 	glEnable(GL_DEPTH_TEST);
+
+	gameModels = new Models::GameModels();
+	gameModels->CreateTriangleModel("triangle1");
 
 	//load and compile shaders
 	Core::Shader_Loader shaderLoader;
@@ -56,8 +68,9 @@ int main(int argc, char** argv)
 	Init();
 
 	glutDisplayFunc(Redisplay);
-
+	glutCloseFunc(closeCallback);
 	glutMainLoop();
+	delete gameModels;
 	glDeleteProgram(program);
 	return 0;
 }

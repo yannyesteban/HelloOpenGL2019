@@ -24,6 +24,9 @@
     <ClCompile Include="Shader_Loader.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="GameModels.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\lib\GL\freeglut.dll" />
@@ -34,9 +37,16 @@
     <None Include="Fragment_Shader.glsl">
       <Filter>Archivos de origen</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Shader_Loader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexFormat.h">
+      <Filter>Archivos de origen</Filter>
+    </ClInclude>
+    <ClInclude Include="GameModels.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
