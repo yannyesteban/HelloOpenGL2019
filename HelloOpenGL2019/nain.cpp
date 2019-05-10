@@ -6,6 +6,8 @@
 #include "Shader_Loader.h";
 using namespace Core;
 
+//http://in2gpu.com/2014/12/02/create-triangle-opengl-part/
+
 GLuint program;
 void Redisplay(void)
 {
