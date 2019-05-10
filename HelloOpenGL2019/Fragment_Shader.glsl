@@ -1,7 +1,12 @@
-#version 430 core
-out vec4 color;
+//fragment shader
+#version 450 core
  
-void main(void)
+layout(location = 0) out vec4 out_color;
+ 
+in vec4 color;
+ 
+void main()
 {
-  color = vec4(0.456, 0.23, 0.02, 1.0);
+  out_color = color;
+  //color = vec4(0.456, 0.23, 0.02, 1.0);
 }
