@@ -8,7 +8,7 @@
 #include "Shader_Loader.h";
 #include "GameModels.h";
 using namespace Core;
-
+//http://s08.idav.ucdavis.edu/fatahalian-gpu-architecture.pdf
 //http://in2gpu.com/2014/12/02/create-triangle-opengl-part/
 Models::GameModels* gameModels;
 GLuint program;
