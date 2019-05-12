@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Init\uno.cpp" />
     <ClCompile Include="GameModels.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shader_Manager.cpp" />

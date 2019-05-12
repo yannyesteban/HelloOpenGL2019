@@ -16,6 +16,9 @@
     <Filter Include="Core">
       <UniqueIdentifier>{00b5c762-904b-4c4b-8a3c-14b8ee4a8b25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Core\Init">
+      <UniqueIdentifier>{8a7b0248-403e-4c54-9caf-c96976687e50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameModels.cpp">
@@ -26,6 +29,9 @@
     </ClCompile>
     <ClCompile Include="Shader_Manager.cpp">
       <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Init\uno.cpp">
+      <Filter>Core\Init</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

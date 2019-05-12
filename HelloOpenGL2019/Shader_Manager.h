@@ -1,5 +1,5 @@
 #pragma once
-
+#include <map>
 #include "C:\source\lib\GL\glew.h"
 #include "C:\source\lib\GL\freeglut.h"
 #include <iostream>
@@ -8,17 +8,24 @@ namespace Managers
 
 	class Shader_Manager
 	{
-		private:
-
-			std::string ReadShader(const char* filename);
-			GLuint CreateShader(GLenum shaderType, std::string source, const char* shaderName);
-
 		public:
 
 			Shader_Manager(void);
 			~Shader_Manager(void);
-			GLuint CreateProgram(const char* VertexShaderFilename, const char* FragmentShaderFilename);
-
+			void CreateProgram(
+				const std::string& shaderName,
+				const std::string& VertexShaderFilename, 
+				const std::string& FragmentShaderFilename);
+			static const GLuint GetShader(const std::string&);
+		private:
+			
+			std::string ReadShader(const std::string& filename);
+			GLuint CreateShader(
+				GLenum shaderType,
+				std::string source,
+				const std::string& shaderName);
+			static std::map<std::string, GLuint> programs;
+		
 	};
 }
 

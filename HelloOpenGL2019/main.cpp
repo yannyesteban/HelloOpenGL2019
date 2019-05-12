@@ -8,11 +8,12 @@
 #include "Shader_Manager.h";
 #include "GameModels.h";
 //using namespace Core;
-using namespace Managers;
+//using namespace Managers;
 //http://s08.idav.ucdavis.edu/fatahalian-gpu-architecture.pdf
 //http://in2gpu.com/2014/12/02/create-triangle-opengl-part/
 Models::GameModels* gameModels;
 GLuint program;
+Managers::Shader_Manager* shaderLoader;
 void Redisplay(void)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -39,8 +40,11 @@ void Init()
 	gameModels->CreateTriangleModel("triangle1");
 
 	//load and compile shaders
-	Managers::Shader_Manager shaderLoader;
-	program = shaderLoader.CreateProgram("Vertex_Shader.glsl", "Fragment_Shader.glsl");
+	//Managers::Shader_Manager shaderLoader;
+	shaderLoader = new Managers::Shader_Manager();
+	shaderLoader->CreateProgram("colorShader", "Vertex_Shader.glsl", "Fragment_Shader.glsl");
+	program = Managers::Shader_Manager::GetShader("colorShader");
+	
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 }
 int main(int argc, char** argv)
@@ -48,22 +52,23 @@ int main(int argc, char** argv)
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
-	glutInitWindowPosition(500, 500);//optional
+	glutInitWindowPosition(100, 100);//optional
 	glutInitWindowSize(800, 600); //optional
 	glutCreateWindow("OpenGL First Window");
 
 
-	
+	glewExperimental = true;
 
 	glewInit();
 	if (glewIsSupported("GL_VERSION_4_5"))
 	{
-		std::cout << " GLEW Version is 4.5\n ";
+		std::cout << " OpenGL Version is 4.5\n ";
 	}
 	else
 	{
-		std::cout << "GLEW 4.5 not supported\n ";
+		std::cout << "OpenGL 4.4 not supported\n ";
 	}
+
 	//glEnable(GL_DEPTH_TEST);
 
 	Init();
@@ -72,6 +77,7 @@ int main(int argc, char** argv)
 	glutCloseFunc(closeCallback);
 	glutMainLoop();
 	delete gameModels;
-	glDeleteProgram(program);
+	delete shaderLoader;
+	
 	return 0;
 }
