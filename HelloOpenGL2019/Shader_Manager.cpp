@@ -1,4 +1,4 @@
-#include "Shader_Loader.h"
+#include "Shader_Manager.h"
 #include<iostream>
 #include<fstream>
 #include<vector>
@@ -6,10 +6,10 @@
 
 using namespace Core;
 
-Shader_Loader::Shader_Loader(void) {}
-Shader_Loader::~Shader_Loader(void) {}
+Shader_Manager::Shader_Manager(void) {}
+Shader_Manager::~Shader_Manager(void) {}
 
-std::string Shader_Loader::ReadShader(const char* filename)
+std::string Shader_Manager::ReadShader(const char* filename)
 {
 
 	std::string shaderCode;
@@ -29,7 +29,7 @@ std::string Shader_Loader::ReadShader(const char* filename)
 	return shaderCode;
 }
 
-GLuint Shader_Loader::CreateShader(GLenum shaderType, std::string source, const char* shaderName)
+GLuint Shader_Manager::CreateShader(GLenum shaderType, std::string source, const char* shaderName)
 {
 
 	int compile_result = 0;
@@ -56,7 +56,7 @@ GLuint Shader_Loader::CreateShader(GLenum shaderType, std::string source, const 
 	return shader;
 }
 
-GLuint Shader_Loader::CreateProgram(const char* vertexShaderFilename, const char* fragmentShaderFilename)
+GLuint Shader_Manager::CreateProgram(const char* vertexShaderFilename, const char* fragmentShaderFilename)
 {
 
 	//read the shader files and save the code

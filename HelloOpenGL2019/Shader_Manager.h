@@ -6,7 +6,7 @@
 namespace Core
 {
 
-	class Shader_Loader
+	class Shader_Manager
 	{
 		private:
 
@@ -15,8 +15,8 @@ namespace Core
 
 		public:
 
-			Shader_Loader(void);
-			~Shader_Loader(void);
+			Shader_Manager(void);
+			~Shader_Manager(void);
 			GLuint CreateProgram(const char* VertexShaderFilename, const char* FragmentShaderFilename);
 
 	};

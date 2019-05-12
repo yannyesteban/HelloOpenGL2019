@@ -5,7 +5,7 @@
 #include<stdlib.h>;
 #include<fstream>;
 #include<vector>;
-#include "Shader_Loader.h";
+#include "Shader_Manager.h";
 #include "GameModels.h";
 using namespace Core;
 //http://s08.idav.ucdavis.edu/fatahalian-gpu-architecture.pdf
@@ -38,7 +38,7 @@ void Init()
 	gameModels->CreateTriangleModel("triangle1");
 
 	//load and compile shaders
-	Core::Shader_Loader shaderLoader;
+	Core::Shader_Manager shaderLoader;
 	program = shaderLoader.CreateProgram("Vertex_Shader.glsl", "Fragment_Shader.glsl");
 	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 }
