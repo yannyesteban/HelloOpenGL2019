@@ -4,7 +4,7 @@
 #include<vector>
 
 
-using namespace Core;
+using namespace Managers;
 
 Shader_Manager::Shader_Manager(void) {}
 Shader_Manager::~Shader_Manager(void) {}

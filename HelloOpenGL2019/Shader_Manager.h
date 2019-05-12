@@ -3,7 +3,7 @@
 #include "C:\source\lib\GL\glew.h"
 #include "C:\source\lib\GL\freeglut.h"
 #include <iostream>
-namespace Core
+namespace Managers
 {
 
 	class Shader_Manager
