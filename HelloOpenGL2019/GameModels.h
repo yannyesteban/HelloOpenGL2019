@@ -2,7 +2,6 @@
 #ifndef _GAME_MODELS_H_
 #define _GAME_MODELS_H_
 
-#pragma once
 #include "C:\source\lib\GL\glew.h"
 #include "C:\source\lib\GL\freeglut.h"
 #include "VertexFormat.h" //added 3/21/2015

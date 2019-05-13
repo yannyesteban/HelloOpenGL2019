@@ -130,8 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Init\uno.cpp" />
+    <ClCompile Include="Core\Init\a.cpp" />
+    <ClCompile Include="Core\Init\Init_GLUT.cpp" />
     <ClCompile Include="GameModels.cpp" />
+    <ClCompile Include="Core\Init\Init_GLEW.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Shader_Manager.cpp" />
   </ItemGroup>
@@ -143,9 +145,14 @@
     <None Include="Vertex_Shader.glsl" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="contextInfo.h" />
+    <ClInclude Include="framebufferInfo.h" />
     <ClInclude Include="GameModels.h" />
+    <ClInclude Include="Init_GLEW.h" />
+    <ClInclude Include="Init_GLUT.h" />
     <ClInclude Include="Shader_Manager.h" />
     <ClInclude Include="VertexFormat.h" />
+    <ClInclude Include="WindowInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
