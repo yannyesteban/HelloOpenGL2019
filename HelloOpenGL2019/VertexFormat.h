@@ -4,18 +4,23 @@
 
 #include "glm\glm.hpp" //installed with NuGet
 
-struct VertexFormat
+namespace Rendering
 {
 
-	glm::vec3 position;
-	glm::vec4 color;
-
-	VertexFormat(const glm::vec3& iPos, const glm::vec4& iColor)
+	struct VertexFormat
 	{
-		position = iPos;
-		color = iColor;
-	}
+		glm::vec3 position;
+		glm::vec4 color;
 
-};
+		VertexFormat(const glm::vec3& iPos, const glm::vec4& iColor)
+		{
+			position = iPos;
+			color = iColor;
+		}
+
+		VertexFormat() {}
+
+	};
+}
 
 #endif

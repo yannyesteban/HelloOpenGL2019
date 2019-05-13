@@ -17,6 +17,6 @@ void Init_GLEW::Init() {
 	}
 	else
 	{
-		std::cout << " GLEW GL_VERSION_4_5 not supported\n ";
+		std::cout << " GLEW GL_VERSION_4_5 not supported!!!\n ";
 	}
 }

@@ -19,25 +19,46 @@
     <Filter Include="Core\Init">
       <UniqueIdentifier>{8a7b0248-403e-4c54-9caf-c96976687e50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Rendering">
+      <UniqueIdentifier>{bd79842b-63b0-4e69-9cdb-ed6b54cedce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Rendering\Models">
+      <UniqueIdentifier>{55088487-9ef0-4b7a-8117-7d94c093c0d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{45dc17f5-62c4-4e5d-b84d-aa6164157c53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameModels.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Shader_Manager.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Init_GLEW.cpp">
-      <Filter>Core\Init</Filter>
-    </ClCompile>
-    <ClCompile Include="Init_GLUT.cpp">
-      <Filter>Core\Init</Filter>
-    </ClCompile>
     <ClCompile Include="Core\Init\a.cpp">
       <Filter>Core\Init</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Init\Init_GLEW.cpp">
+      <Filter>Core\Init</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Init\Init_GLUT.cpp">
+      <Filter>Core\Init</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\Model.cpp">
+      <Filter>Rendering\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\Triangle.cpp">
+      <Filter>Rendering\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Managers\Models_Manager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Manager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader_Manager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\Models\quad.cpp">
+      <Filter>Rendering\Models</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -50,31 +71,50 @@
       <Filter>Archivos de origen</Filter>
     </None>
     <None Include="packages.config" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VertexFormat.h">
       <Filter>Archivos de origen</Filter>
     </ClInclude>
-    <ClInclude Include="GameModels.h">
+    <ClInclude Include="Core\Init\contextInfo.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Init\framebufferInfo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Init\Init_GLEW.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Init\Init_GLUT.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Init\WindowInfo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Init\IListener.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Models\Model.h">
+      <Filter>Rendering\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Models\Triangle.h">
+      <Filter>Rendering\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Managers\Models_Manager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\IGameObject.h">
+      <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Manager.h">
+      <Filter>Managers</Filter>
     </ClInclude>
     <ClInclude Include="Shader_Manager.h">
-      <Filter>Archivos de encabezado</Filter>
+      <Filter>Managers</Filter>
     </ClInclude>
-    <ClInclude Include="WindowInfo.h">
-      <Filter>Core\Init</Filter>
-    </ClInclude>
-    <ClInclude Include="contextInfo.h">
-      <Filter>Core\Init</Filter>
-    </ClInclude>
-    <ClInclude Include="framebufferInfo.h">
-      <Filter>Core\Init</Filter>
-    </ClInclude>
-    <ClInclude Include="Init_GLEW.h">
-      <Filter>Core\Init</Filter>
-    </ClInclude>
-    <ClInclude Include="Init_GLUT.h">
-      <Filter>Core\Init</Filter>
+    <ClInclude Include="Rendering\Models\quad.h">
+      <Filter>Rendering\Models</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

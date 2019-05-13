@@ -132,27 +132,38 @@
   <ItemGroup>
     <ClCompile Include="Core\Init\a.cpp" />
     <ClCompile Include="Core\Init\Init_GLUT.cpp" />
-    <ClCompile Include="GameModels.cpp" />
     <ClCompile Include="Core\Init\Init_GLEW.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Managers\Models_Manager.cpp" />
+    <ClCompile Include="Rendering\Models\Model.cpp" />
+    <ClCompile Include="Rendering\Models\quad.cpp" />
+    <ClCompile Include="Rendering\Models\Triangle.cpp" />
+    <ClCompile Include="Scene_Manager.cpp" />
     <ClCompile Include="Shader_Manager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\lib\GL\freeglut.dll" />
     <None Include="..\..\..\lib\GL\freeglutd.dll" />
+    <None Include="ClassDiagram.cd" />
     <None Include="Fragment_Shader.glsl" />
     <None Include="packages.config" />
     <None Include="Vertex_Shader.glsl" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="contextInfo.h" />
-    <ClInclude Include="framebufferInfo.h" />
-    <ClInclude Include="GameModels.h" />
-    <ClInclude Include="Init_GLEW.h" />
-    <ClInclude Include="Init_GLUT.h" />
+    <ClInclude Include="Core\Init\contextInfo.h" />
+    <ClInclude Include="Core\Init\framebufferInfo.h" />
+    <ClInclude Include="Core\Init\IListener.h" />
+    <ClInclude Include="Core\Init\Init_GLEW.h" />
+    <ClInclude Include="Core\Init\Init_GLUT.h" />
+    <ClInclude Include="Managers\Models_Manager.h" />
+    <ClInclude Include="Rendering\IGameObject.h" />
+    <ClInclude Include="Rendering\Models\Model.h" />
+    <ClInclude Include="Rendering\Models\quad.h" />
+    <ClInclude Include="Rendering\Models\Triangle.h" />
+    <ClInclude Include="Scene_Manager.h" />
     <ClInclude Include="Shader_Manager.h" />
     <ClInclude Include="VertexFormat.h" />
-    <ClInclude Include="WindowInfo.h" />
+    <ClInclude Include="Core\Init\WindowInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
