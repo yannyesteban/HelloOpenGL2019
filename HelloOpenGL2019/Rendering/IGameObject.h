@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
 #include <iostream>
-#include "C:\source\lib\GL\glew.h"
-#include "C:\source\lib\GL\freeglut.h"
+#include "GL/glew.h"
+#include "GL/freeglut.h"
 #include "..\VertexFormat.h"
 
 namespace Rendering

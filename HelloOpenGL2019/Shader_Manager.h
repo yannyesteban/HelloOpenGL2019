@@ -1,7 +1,7 @@
 #pragma once
 #include <map>
-#include "C:\source\lib\GL\glew.h"
-#include "C:\source\lib\GL\freeglut.h"
+#include "GL/glew.h"
+#include "GL/freeglut.h"
 #include <iostream>
 namespace Managers
 {

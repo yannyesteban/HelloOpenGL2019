@@ -1,8 +1,8 @@
 #//Init_GLEW.h
 #pragma once
 #include <iostream>
-#include "C:\source\lib\GL\glew.h"
-#include "C:\source\lib\GL\freeglut.h"
+#include "GL/glew.h"
+#include "GL/freeglut.h"
 namespace Core {
 	//notice that I added another namespace here(optional)
 	namespace Init {

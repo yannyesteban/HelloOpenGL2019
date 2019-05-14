@@ -1,6 +1,6 @@
 #pragma once
-#include "C:\source\lib\GL\glew.h"
-#include "C:\source\lib\GL\freeglut.h"
+#include "GL/glew.h"
+#include "GL/freeglut.h"
 
 namespace Core {
 
